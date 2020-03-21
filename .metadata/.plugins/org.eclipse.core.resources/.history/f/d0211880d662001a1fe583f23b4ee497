@@ -1,0 +1,63 @@
+package co.uniquindio.prueba.test;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.transaction.api.annotation.TransactionMode;
+import org.jboss.arquillian.transaction.api.annotation.Transactional;
+import org.jboss.shrinkwrap.api.Archive;
+import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.asset.EmptyAsset;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import co.edu.uniquindio.entidades.Genero;
+import co.edu.uniquindio.entidades.Persona;
+
+@RunWith(Arquillian.class)
+public class ModeloTest {
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Deployment
+	public static Archive<?> createTestArchive() {
+		return ShrinkWrap.create(WebArchive.class, "prueba.war").addPackage(Persona.class.getPackage())
+				.addAsResource("persistenceForTest.xml", "META-INF/persistence.xml")
+				.addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
+	}
+	@Test
+	public void test() {
+		
+	}
+	
+	@Test
+	@Transactional(value = TransactionMode.ROLLBACK)
+	public void persistenciaPersonaTest() throws ParseException {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date fecha = sdf.parse("12/11/99");
+		
+		Map<String, String> telefonos = new HashMap<String, String>();
+		telefonos.put("casa", "777555");
+		telefonos.put("celular", "3112224444");
+		
+		Persona persona = new Persona();
+		persona.setCedula("123");
+		persona.setNombre("Juanita");
+		persona.setApellido("Perez");
+		persona.setEmail("juana@gmail.com");
+		persona.setGenero(Genero.FEMENINO);
+		persona.setFechaNacimiento(fecha);
+		persona.setTelefonos(telefonos);
+		
+		entityManager.persist(persona);
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;src&apos; to &apos;proyectoPruebas/src/main/java/co.edu.uniquindio.pruebas&apos;&#x0A;- Original project: &apos;ProyectoPersistencia&apos;&#x0A;- Destination element: &apos;proyectoPruebas/src/main/java/co.edu.uniquindio.pruebas&apos;&#x0A;- Original element: &apos;src&apos;&#x0A;- Update references to refactored element" description="Move folder" destination="=proyectoPruebas/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;co.edu.uniquindio.pruebas" element1="src" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1583244109729" units="0" version="1.0"/>
+</session>

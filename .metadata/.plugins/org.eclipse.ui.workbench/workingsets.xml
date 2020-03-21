@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582633282842_0" label="Java Main Sources" name="Java Main Sources">
+<item elementID="=Proyecto Persistencia/src\/main\/resources=/maven.pomderived=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582633282962_1" label="Java Test Sources" name="Java Test Sources">
+<item elementID="=Proyecto Persistencia/src\/test\/resources=/maven.pomderived=/true=/=/test=/true=/" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1583361973728_3" label="ProyectoPadre" name="ProyectoPadre">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ProyectoPruebas" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Proyecto Persistencia" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ProyectoPadre" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1582633295358_2" label="Window Working Set" name="Aggregate for window 1582633295357"/>
+</workingSetManager>

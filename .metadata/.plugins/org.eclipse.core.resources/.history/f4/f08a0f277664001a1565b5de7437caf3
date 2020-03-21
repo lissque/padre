@@ -1,0 +1,21 @@
+package co.edu.uniquindio.ejemploe;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+/**
+ * Entity implementation class for Entity: EspacioAcademico
+ *
+ */
+@Entity
+
+public class EspacioAcademico implements Serializable {
+
+	
+	private static final long serialVersionUID = 1L;
+
+	public EspacioAcademico() {
+		super();
+	}
+   
+}
